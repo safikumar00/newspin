@@ -857,12 +857,12 @@
     <audio id="winner_cheer" src="./assests/winner_cheers.mp3" type="audio/mp3"></audio>
 
     <div id="box" class="box d-flex align-items-center flex-column">
-        <img src="./assests/title.webp" alt="" class="title">
+        <img src="./assests/title.webp" alt="" class="title" loading="lazy">
         <!-- <img src="./assests/tag.webp" alt="" class="tag mt-2"> -->
         <div id="wheel" class="wheel d-flex justify-content-center align-items-center mt-2">
-            <img src="./assests/wheel.webp" alt="" class="wheel_img" id="wheel_img">
+            <img src="./assests/wheel.webp" loading="lazy" alt="" class="wheel_img" id="wheel_img">
             <div id="spin_button" class="spin_button">
-                <img src="./assests/spin.webp" alt="spin">
+                <img src="./assests/spin.webp" alt="spin" loading="lazy">
             </div>
             <!-- <div id="pointer" class="pointer">
                 <div id="dot" class="dot"></div>
@@ -1004,11 +1004,13 @@
 
     window.onload = function () {
         const preLoader = document.querySelector(".pre-loader");
-        preLoader.style.transition = "opacity 2s";
-        preLoader.style.opacity = "0";
         setTimeout(() => {
-          preLoader.style.display = "none";
-        }, 2000);
+          preLoader.style.transition = "opacity 2s";
+          preLoader.style.opacity = "0";
+          setTimeout(() => {
+            preLoader.style.display = "none";
+          }, 2000);
+        }, 3000);
       }
         // -----------------------------
         // GLOBAL CONFIGURATION & VARIABLES
