@@ -1004,13 +1004,11 @@
 
     window.onload = function () {
         const preLoader = document.querySelector(".pre-loader");
+        preLoader.style.transition = "opacity 2s";
+        preLoader.style.opacity = "0";
         setTimeout(() => {
-          preLoader.style.transition = "opacity 2s";
-          preLoader.style.opacity = "0";
-          setTimeout(() => {
-            preLoader.style.display = "none";
-          }, 2000);
-        }, 5000);
+          preLoader.style.display = "none";
+        }, 2000);
       }
         // -----------------------------
         // GLOBAL CONFIGURATION & VARIABLES
