@@ -1005,8 +1005,7 @@
     </div>
 
     <script>
-
-        window.onload = function () {
+          window.onload = function () {
             const preLoader = document.querySelector(".pre-loader");
             preLoader.style.transition = "opacity 2s";
             preLoader.style.opacity = "0";
@@ -1014,6 +1013,11 @@
                 preLoader.style.display = "none";
             }, 2000);
         }
+    </script>
+
+    <script defer>
+
+      
         // -----------------------------
         // GLOBAL CONFIGURATION & VARIABLES
         // -----------------------------
@@ -1115,7 +1119,7 @@
 
 
 
-    <script>
+    <script defer>
         let W = window.innerWidth;
         let H = window.innerHeight;
         const canvas = document.getElementById("canvas");
