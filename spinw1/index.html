@@ -5,19 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spin_wheel</title>
- -->
-     -->
     <style>
        *{margin:0;padding:0}body{background-color:#570103;background-repeat:no-repeat;background-size:cover;height:100;display:flex;flex-direction:flex-column}.box{height:100vh;overflow:clip;padding:10px;display:flex;align-items:center;flex-direction:column}.title{width:76%;min-width:340px;max-width:400px}.tag{width:80%}.wheel{position:relative;display:flex;align-items:center;justify-content:center}.wheel_img{width:95%;min-width:330px;min-height:330px;height:auto}.spin_button{position:absolute;width:25%;height:25%;border-radius:50%;filter:drop-shadow(0 0 4px rgb(255 255 255 / .4));text-shadow:0 0 4px rgb(0 0 0 / .4);top:50%;left:50%;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;overflow:hidden;font-size:24px;font-weight:800;color:#fff;cursor:pointer;font-size:18px}.spin_button img{height:100%}.hand{position:absolute;top:60%;left:55%;transform:translate(-50%,-50%) rotate(-30deg);width:60px;animation:hand 1s ease-in-out infinite forwards;z-index:1}@keyframes hand{0%,100%{top:60%;left:55%}50%{top:65%;left:65%}}.auto-rotate{animation:auto-rotate 60s linear infinite;transform:transition 60s linear;transform:rotate(360deg)}@keyframes auto-rotate{from{transform:rotate(0deg)}to{transform:rotate(3600deg)}}.pointer{position:absolute;top:0;left:50%;transform:translateX(-50%) rotate(-180deg);width:0;height:0;border-left:20px solid #fff0;border-right:20px solid #fff0;border-bottom:50px solid #febd48;border-radius:25px;filter:drop-shadow(1px -5px 1px rgba(0,0,.5,.5))}.pointer-toggle{animation:pointer 0.1s linear infinite alternate}@keyframes pointer{0%{transform:translateX(-50%) rotate(-180deg)}100%{transform:translateX(-50%) rotate(-220deg)}}.pointer .dot{position:absolute;top:30px;left:-5px;width:10px;height:10px;border-radius:50%;background-color:#fff;border:1px solid #d9d9d9}.made{width:50%;margin-top:10px}.sentence{width:100%;margin:20px;color:#fff;font-weight:600}.icon img{width:15%;margin-right:10px}.retry_popup{display:none;align-items:center;justify-content:center;flex-direction:column;position:absolute;top:0;left:0;width:100vw;height:100vh;background:rgb(0 0 0 / .7);z-index:1}.retry img{width:100%;height:104%;background-size:contain}.retry{background-color:#fff;border-radius:20px;padding:20px 0;margin:0 40px;border:10px solid #fabc52}.shake-horizontal{-webkit-animation:shake-horizontal 4s cubic-bezier(.455,.03,.515,.955) infinite both;animation:shake-horizontal 4s cubic-bezier(.455,.03,.515,.955) infinite both}@-webkit-keyframes shake-horizontal{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}10%,30%,50%,70%{-webkit-transform:translateX(-10px);transform:translateX(-10px)}20%,40%,60%{-webkit-transform:translateX(10px);transform:translateX(10px)}80%{-webkit-transform:translateX(8px);transform:translateX(8px)}90%{-webkit-transform:translateX(-8px);transform:translateX(-8px)}}@keyframes shake-horizontal{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}10%,30%,50%,70%{-webkit-transform:translateX(-10px);transform:translateX(-10px)}20%,40%,60%{-webkit-transform:translateX(10px);transform:translateX(10px)}80%{-webkit-transform:translateX(8px);transform:translateX(8px)}90%{-webkit-transform:translateX(-8px);transform:translateX(-8px)}}@-webkit-keyframes wobble-hor-top{0%,100%{-webkit-transform:translateX(0%);transform:translateX(0%);-webkit-transform-origin:50% 50%;transform-origin:50% 50%}15%{-webkit-transform:translateX(-30px) rotate(6deg);transform:translateX(-30px) rotate(6deg)}30%{-webkit-transform:translateX(15px) rotate(-6deg);transform:translateX(15px) rotate(-6deg)}45%{-webkit-transform:translateX(-15px) rotate(3.6deg);transform:translateX(-15px) rotate(3.6deg)}60%{-webkit-transform:translateX(9px) rotate(-2.4deg);transform:translateX(9px) rotate(-2.4deg)}75%{-webkit-transform:translateX(-6px) rotate(1.2deg);transform:translateX(-6px) rotate(1.2deg)}}@keyframes wobble-hor-top{0%,100%{-webkit-transform:translateX(0%);transform:translateX(0%);-webkit-transform-origin:50% 50%;transform-origin:50% 50%}15%{-webkit-transform:translateX(-30px) rotate(6deg);transform:translateX(-30px) rotate(6deg)}30%{-webkit-transform:translateX(15px) rotate(-6deg);transform:translateX(15px) rotate(-6deg)}45%{-webkit-transform:translateX(-15px) rotate(3.6deg);transform:translateX(-15px) rotate(3.6deg)}60%{-webkit-transform:translateX(9px) rotate(-2.4deg);transform:translateX(9px) rotate(-2.4deg)}75%{-webkit-transform:translateX(-6px) rotate(1.2deg);transform:translateX(-6px) rotate(1.2deg)}}.close{margin-left:20px}.shake-horizontal{-webkit-animation:shake-horizontal 10s cubic-bezier(.455,.03,.515,.955) infinite both;animation:shake-horizontal 10s cubic-bezier(.455,.03,.515,.955) infinite both}@-webkit-keyframes shake-horizontal{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}10%,30%,50%,70%{-webkit-transform:translateX(-10px);transform:translateX(-10px)}20%,40%,60%{-webkit-transform:translateX(10px);transform:translateX(10px)}80%{-webkit-transform:translateX(8px);transform:translateX(8px)}90%{-webkit-transform:translateX(-8px);transform:translateX(-8px)}}@keyframes shake-horizontal{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}10%,30%,50%,70%{-webkit-transform:translateX(-10px);transform:translateX(-10px)}20%,40%,60%{-webkit-transform:translateX(10px);transform:translateX(10px)}80%{-webkit-transform:translateX(8px);transform:translateX(8px)}90%{-webkit-transform:translateX(-8px);transform:translateX(-8px)}}.retry_icon img{width:120%}.retry_icon{border-radius:50px;border:1px solid #000;justify-content:space-around;width:60%;margin-top:-60px;height:75px;z-index:1;text-align:center}.retry_icon p{font-size:30px;font-weight:600;font-style:italic;padding-right:5px}.heartbeat{-webkit-animation:heartbeat 1.5s ease-in-out infinite both;animation:heartbeat 1.5s ease-in-out infinite both}@-webkit-keyframes heartbeat{from{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:center center;transform-origin:center center;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}10%{-webkit-transform:scale(.91);transform:scale(.91);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}17%{-webkit-transform:scale(.98);transform:scale(.98);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}33%{-webkit-transform:scale(.87);transform:scale(.87);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}45%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}@keyframes heartbeat{from{-webkit-transform:scale(1);transform:scale(1);-webkit-transform-origin:center center;transform-origin:center center;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}10%{-webkit-transform:scale(.91);transform:scale(.91);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}17%{-webkit-transform:scale(.98);transform:scale(.98);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}33%{-webkit-transform:scale(.87);transform:scale(.87);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}45%{-webkit-transform:scale(1);transform:scale(1);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}}.popup-con{display:flex;align-items:center;justify-content:center;justify-self:center;flex-direction:column;border-radius:8px;background:linear-gradient(to bottom,#fbe4ff 0%,#fff 50%,#fff 100%);color:#000;text-align:center;width:100%}.popup-con .claim-amount{padding:10px 20px;background-image:linear-gradient(180deg,#28a745 0%,#28a745 100%);box-shadow:0 1px 3px rgb(0 0 0 / .25);color:#fff;border-radius:8px;border:0;font-weight:600;font-size:20px;border:1px ridge #fff;text-transform:uppercase;width:60%;z-index:2}.final_popup{position:absolute;display:grid;top:0;left:0;right:0;bottom:0;display:none;justify-self:center;align-items:center;z-index:2;background-color:rgb(0 0 0 / .85);backdrop-filter:blur(10px);padding:20px;flex-direction:column;height:100vh;overflow-y:scroll}.timer-container{display:flex;justify-content:center;align-items:center;gap:15px}.timer-box{padding:1px;background-color:#fffffff3!important;color:#8d67ec;border-radius:10px;text-align:center;min-width:30px;background:rgb(255 255 255 / .801);font-weight:700;border:1px solid rgb(255 255 255 / .568);font-size:14px;margin-top:-20px;margin-bottom:20px}.dots{margin-top:-20px;margin-bottom:20px}.claim-amount{padding:10px 20px;background-image:linear-gradient(180deg,#28a745 0%,#28a745 100%);box-shadow:0 1px 3px rgb(0 0 0 / .25);color:#fff;border-radius:8px;border:0;font-weight:600;font-size:20px;border:1px ridge #fff;text-transform:uppercase;width:60%;z-index:2;margin-top:-20px}.time{text-align:center;margin-top:25px}.time h2{margin-bottom:10px}.steps{background-color:#fff;color:#000;display:flex;flex-direction:column;margin-top:20px;border-radius:8px;padding-bottom:10px;box-shadow:0 4px 8px rgb(241 241 241 / .74);width:100%}.steps h2{color:#000;padding:10px;font-weight:700;text-align:center;border-radius:8px 8px 0 0;text-decoration:underline;font-size:20px}.steps p{font-size:14px;padding-left:34%}.steps span{font-weight:700;padding-right:10px}.mt-10{margin:10px}.mb-4{margin-top:-50px}.pulsate-bck{-webkit-animation:pulsate-bck 2s ease-in-out infinite both;animation:pulsate-bck 2s ease-in-out infinite both}.p{margin-top:0}@-webkit-keyframes pulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes pulsate-bck{0%{-webkit-transform:scale(1);transform:scale(1)}50%{-webkit-transform:scale(.9);transform:scale(.9)}100%{-webkit-transform:scale(1);transform:scale(1)}}canvas{width:90%;margin:0;position:absolute;top:0;z-index:1;overflow-y:hidden;overflow-x:hidden;height:100vh}a{z-index:2;width:100%}.marqee{background:rgb(255 255 255 / .295);box-shadow:0 8px 32px 0 rgb(255 255 255 / .37);font-weight:700;border-radius:12px;border:2px solid rgb(255 255 255 / .459);padding:8px 10px;margin-top:10px;height:75px;overflow:hidden;width:100%}@media (min-width:700px){body{display:none!important}}@media (min-width:380px){.popup-con{margin-top:20%}.marqee{margin-top:10%}.title{margin-top:40px;width:80%}}.loader{--R:100px;--g1:#514b82 96%, #0000;--g2:#ffffff 96%, #0000;width:calc(2*var(--R));aspect-ratio:1;border-radius:50%;display:grid;-webkit-mask:linear-gradient(#000 0 0);animation:l30 2s infinite linear}.loader::before,.loader::after{content:"";grid-area:1/1;width:50%;background:radial-gradient(farthest-side,var(--g1)) calc(var(--R) + 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R)   - var(--R)),radial-gradient(farthest-side,var(--g1)) calc(var(--R) + 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R)   - var(--R)),radial-gradient(farthest-side,var(--g2)) calc(var(--R) + 0.5*var(--R)   - var(--R)) calc(var(--R) - 0.866*var(--R) - var(--R)),radial-gradient(farthest-side,var(--g1)) 0 calc(-1*var(--R)),radial-gradient(farthest-side,var(--g2)) calc(var(--R) - 0.5*var(--R)   - var(--R)) calc(var(--R) - 0.866*var(--R) - var(--R)),radial-gradient(farthest-side,var(--g1)) calc(var(--R) - 0.866*var(--R) - var(--R)) calc(var(--R) - 0.5*var(--R)   - var(--R)),radial-gradient(farthest-side,var(--g2)) calc(-1*var(--R)) 0,radial-gradient(farthest-side,var(--g1)) calc(var(--R) - 0.866*var(--R) - var(--R)) calc(var(--R) + 0.5*var(--R)   - var(--R));background-size:calc(2*var(--R)) calc(2*var(--R));background-repeat:no-repeat}.loader::after{transform:rotate(180deg);transform-origin:right}@keyframes l30{100%{transform:rotate(-1turn)}}.pre-loader{position:absolute;top:0;left:0;width:100%;height:100%;background-color:#fff;display:flex;justify-content:center;align-items:center;z-index:9999}
     </style>
-</script> -->
 </head>
 
 
 <body class="">
     <div class="pre-loader">
 
-</dotlottie-player> -->
          <div class="loader"></div>
     </div>
 
@@ -29,29 +25,14 @@
 
     <div id="box" class="box ">
         <img src="./assests/title1.webp" alt="" class="title" width="400px" height="400px">
-         -->
         <div id="wheel" class="wheel  mt-2">
             <img src="./assests/wheel3.webp"  alt="" class="wheel_img" id="wheel_img" width="400px" height="400px">
             <div id="spin_button" class="spin_button">
                 <img src="./assests/spin.webp" alt="spin" loading="lazy" width="100px" height="100px">
             </div>
-            
-                <div id="dot" class="dot"></div>
-            </div> -->
             <img src="./assests/hand.webp" style="display: none" class="hand" alt="">
         </div>
-         -->
-        
-            <div id="icon1" class="icon d-flex align-items-center justify-content-center flex-row">
-                <img src="./assests/tick.webp" alt="">
-                <p class="mb-0">UPI Transaction</p>
-            </div>
-
-            <div id="icon2" class="icon d-flex align-items-center justify-content-center flex-row">
-                <img src="./assests/tick.webp" alt="">
-                <p class="mb-0">100% Guarantee</p>
-            </div>
-        </div> -->
+    
 
         <div class="marqee">
             <p style="text-align: center; color: white;">Winner's List</p>
@@ -129,10 +110,8 @@
 
     <div id="final_popup" class="final_popup">
         <canvas id="canvas"></canvas>
-        <i>HURRAY ! CONGRATULATIONS !</i></h1> -->
-        Just click on <strong>Claim Now</strong> to receive the deal.</p> -->
+
         <div class="popup-con ">
-             -->
             <div>
                 <img src="./assests/image_3.webp" alt="" width="100%">
             </div>
@@ -155,13 +134,7 @@
             <p class="mt-10" style="font-size: 12px;">Hurry up! Valid for few minutes only.</p>
         </div>
 
-        
-            <div class="valid_time"
-                style="display: flex; align-items: center; justify-content: center; flex-direction: column; font-size: 16px;">
-                <p>Offer Valid Till</p>
-                <div id="timer" style="font-weight: 600; margin-top: 5px;"></div>
-            </div>
-        </div> -->
+
         <div class="steps">
             <h2 class="steps-title">Steps To Claim The Offer</h2>
             <p><span>Step 1</span>Download</p>
@@ -287,109 +260,13 @@
 
 
     <script defer>
-        let W = window.innerWidth;
-        let H = window.innerHeight;
-        const canvas = document.getElementById("canvas");
-        const context = canvas.getContext("2d");
-        const maxConfettis = 10;
-        const particles = [];
-
-        const possibleColors = [
-            "DodgerBlue",
-            "OliveDrab",
-            "Gold",
-            "Pink",
-            "SlateBlue",
-            "LightBlue",
-            "Gold",
-            "Violet",
-            "PaleGreen",
-            "SteelBlue",
-            "SandyBrown",
-            "Chocolate",
-            "Crimson"
-        ];
-
-        function randomFromTo(from, to) {
-            return Math.floor(Math.random() * (to - from + 1) + from);
-        }
-
-        function confettiParticle() {
-            this.x = Math.random() * W; // x
-            this.y = Math.random() * H - H; // y
-            this.r = randomFromTo(11, 33); // radius
-            this.d = Math.random() * maxConfettis + 11;
-            this.color =
-                possibleColors[Math.floor(Math.random() * possibleColors.length)];
-            this.tilt = Math.floor(Math.random() * 33) - 11;
-            this.tiltAngleIncremental = Math.random() * 0.07 + 0.05;
-            this.tiltAngle = 0;
-
-            this.draw = function () {
-                context.beginPath();
-                context.lineWidth = this.r / 2;
-                context.strokeStyle = this.color;
-                context.moveTo(this.x + this.tilt + this.r / 3, this.y);
-                context.lineTo(this.x + this.tilt, this.y + this.tilt + this.r / 5);
-                return context.stroke();
-            };
-        }
-
-        function Draw() {
-            const results = [];
-
-            // Magical recursive functional love
-            requestAnimationFrame(Draw);
-
-            context.clearRect(0, 0, W, window.innerHeight);
-
-            for (var i = 0; i < maxConfettis; i++) {
-                results.push(particles[i].draw());
-            }
-
-            let particle = {};
-            let remainingFlakes = 0;
-            for (var i = 0; i < maxConfettis; i++) {
-                particle = particles[i];
-
-                particle.tiltAngle += particle.tiltAngleIncremental;
-                particle.y += (Math.cos(particle.d) + 3 + particle.r / 2) / 2;
-                particle.tilt = Math.sin(particle.tiltAngle - i / 3) * 15;
-
-                if (particle.y <= H) remainingFlakes++;
-
-                // If a confetti has fluttered out of view,
-                // bring it back to above the viewport and let if re-fall.
-                if (particle.x > W + 30 || particle.x < -30 || particle.y > H) {
-                    particle.x = Math.random() * W;
-                    particle.y = -30;
-                    particle.tilt = Math.floor(Math.random() * 10) - 20;
-                }
-            }
-
-            return results;
-        }
-
-        window.addEventListener(
-            "resize",
-            function () {
-                W = window.innerWidth;
-                H = window.innerHeight;
-                canvas.width = window.innerWidth;
-                canvas.height = window.innerHeight;
-            },
-            false
-        );
-
-        // Push new confetti objects to particles[]
-        for (var i = 0; i < maxConfettis; i++) {
-            particles.push(new confettiParticle());
-        }
-
-        // Initialize
-        canvas.width = W;
-        canvas.height = H;
-        Draw();
+       let W=window.innerWidth;let H=window.innerHeight;const canvas=document.getElementById("canvas");const context=canvas.getContext("2d");const maxConfettis=10;const particles=[];const possibleColors=["DodgerBlue","OliveDrab","Gold","Pink","SlateBlue","LightBlue","Gold","Violet","PaleGreen","SteelBlue","SandyBrown","Chocolate","Crimson"];function randomFromTo(from,to){return Math.floor(Math.random()*(to-from+1)+from)}
+function confettiParticle(){this.x=Math.random()*W;this.y=Math.random()*H-H;this.r=randomFromTo(11,33);this.d=Math.random()*maxConfettis+11;this.color=possibleColors[Math.floor(Math.random()*possibleColors.length)];this.tilt=Math.floor(Math.random()*33)-11;this.tiltAngleIncremental=Math.random()*0.07+0.05;this.tiltAngle=0;this.draw=function(){context.beginPath();context.lineWidth=this.r/2;context.strokeStyle=this.color;context.moveTo(this.x+this.tilt+this.r/3,this.y);context.lineTo(this.x+this.tilt,this.y+this.tilt+this.r/5);return context.stroke()}}
+function Draw(){const results=[];requestAnimationFrame(Draw);context.clearRect(0,0,W,window.innerHeight);for(var i=0;i<maxConfettis;i++){results.push(particles[i].draw())}
+let particle={};let remainingFlakes=0;for(var i=0;i<maxConfettis;i++){particle=particles[i];particle.tiltAngle+=particle.tiltAngleIncremental;particle.y+=(Math.cos(particle.d)+3+particle.r/2)/2;particle.tilt=Math.sin(particle.tiltAngle-i/3)*15;if(particle.y<=H)remainingFlakes++;if(particle.x>W+30||particle.x<-30||particle.y>H){particle.x=Math.random()*W;particle.y=-30;particle.tilt=Math.floor(Math.random()*10)-20}}
+return results}
+window.addEventListener("resize",function(){W=window.innerWidth;H=window.innerHeight;canvas.width=window.innerWidth;canvas.height=window.innerHeight},!1);for(var i=0;i<maxConfettis;i++){particles.push(new confettiParticle())}
+canvas.width=W;canvas.height=H;Draw()
     </script>
 
 </body>
