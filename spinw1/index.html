@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spin_wheel</title>
-    <link rel="stylesheet" href="./assests/bootstrap.min.css">
+<!--     <link rel="stylesheet" href="./assests/bootstrap.min.css"> -->
     <!-- <link rel="stylesheet" href="./style.css"> -->
     <style>
         * {
@@ -22,6 +22,7 @@
             background-size: cover;
             height: 100;
             display: flex;
+            flex-direction: flex-column;
         }
 
 
@@ -29,6 +30,9 @@
             height: 100vh;
             overflow: clip;
             padding: 10px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
         }
 
         .title {
@@ -43,6 +47,9 @@
 
         .wheel {
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .wheel_img {
@@ -678,6 +685,7 @@
 
         .time {
             text-align: center;
+            margin-top: 25px;
         }
 
         .time h2 {
@@ -886,7 +894,7 @@
 </head>
 
 
-<body class="flex-column">
+<body class="">
     <div class="pre-loader">
 
 <!--         <dotlottie-player src="https://lottie.host/dc706484-26c6-4776-ab56-05d7fb052f6c/i1S8WXvbA9.lottie"
@@ -900,10 +908,10 @@
     <audio id="crowd_cheering" src="./assests/crowd_cheering.mp3" type="audio/mp3"></audio>
     <audio id="winner_cheer" src="./assests/winner_cheers.mp3" type="audio/mp3"></audio>
 
-    <div id="box" class="box d-flex align-items-center flex-column">
+    <div id="box" class="box ">
         <img src="./assests/title1.webp" alt="" class="title">
         <!-- <img src="./assests/tag.webp" alt="" class="tag mt-2"> -->
-        <div id="wheel" class="wheel d-flex justify-content-center align-items-center mt-2">
+        <div id="wheel" class="wheel  mt-2">
             <img src="./assests/wheel3.webp"  alt="" class="wheel_img" id="wheel_img">
             <div id="spin_button" class="spin_button">
                 <img src="./assests/spin.webp" alt="spin" loading="lazy">
@@ -1010,8 +1018,8 @@
                 <img src="./assests/image_3.webp" alt="" width="100%">
             </div>
 
-            <div class="time mt-5">
-                <h2 class="mb-4" id="heading" style="color: red; font-size: 14px; ">Limited Time
+            <div class="time" >
+                <h2  id="heading" style="color: red; margin-bottom: 20px; font-size: 14px; ">Limited Time
                     Offer Remaining</h2>
                 <div class="timer-container" id="timer" style="font-size: 16px; font-weight: 600;">
                     <div id="hours" class="timer-box">00</div>
@@ -1022,8 +1030,8 @@
                 </div>
             </div>
 
-            <a href="https://www.google.com" target="_blank"><button class="claim-amount mt-20 pulsate-bck"
-                    type="button" style="width: 70%;">Withdraw Now</button></a>
+            <a href="https://www.google.com" target="_blank"><button class="claim-amount  pulsate-bck"
+                    type="button" style="width: 70%; margin-top: 20px;">Withdraw Now</button></a>
 
             <p class="mt-10" style="font-size: 12px;">Hurry up! Valid for few minutes only.</p>
         </div>
