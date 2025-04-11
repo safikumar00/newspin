@@ -5,43 +5,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spin_wheel</title>
-    <link rel="stylesheet" href="./assests/bootstrap.min.css">
+<!--     <link rel="stylesheet" href="./assests/bootstrap.min.css"> -->
     <link rel="stylesheet" href="./style.css">
+<style>
+    .pre-loader{position:absolute;top:0;left:0;width:100%;height:100%;background-color:#fff;display:flex;justify-content:center;align-items:center;z-index:9999;}
+    .loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(farthest-side,#ffa516 94%,#0000) top/8px 8px no-repeat,
+    conic-gradient(#0000 30%,#ffa516);
+  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 8px),#000 0);
+  animation: l13 1s infinite linear;
+}
+@keyframes l13{ 
+  100%{transform: rotate(1turn)}
+}
+</style>
+
 </head>
 
 
-<body class="flex-column">
+<body >
+<div class="pre-loader">
 
+         <div class="loader"></div>
+    </div>
     <audio id="myAudio" src="./assests/spin_audio.mp3" type="audio/mp3"></audio>
     <audio id="coins_audio" src="./assests/Coins_count.mp3" type="audio/mp3"></audio>
     <audio id="crowd_cheering" src="./assests/crowd_cheering.mp3" type="audio/mp3"></audio>
     <audio id="winner_cheer" src="./assests/winner_cheers.mp3" type="audio/mp3"></audio>
 
-    <div id="box" class="box d-flex align-items-center flex-column">
-        <img src="./assests/title.webp" alt="" class="title">
-        <!-- <img src="./assests/tag.webp" alt="" class="tag mt-2"> -->
-        <div id="wheel" class="wheel d-flex justify-content-center align-items-center mt-2">
-            <img src="./assests/wheel.webp" alt="" class="wheel_img" id="wheel_img">
+    <div id="box" class="box ">
+        <img src="./assests/title.webp" alt="" class="title" width="360px" height="360px">
+        <div id="wheel" class="wheel" >
+            <img src="./assests/wheel.webp" alt="" class="wheel_img" id="wheel_img" width="400px" height="400px">
             <div id="spin_button" class="spin_button">
                 <img src="./assests/spin.webp" alt="spin">
             </div>
-            <!-- <div id="pointer" class="pointer">
-                <div id="dot" class="dot"></div>
-            </div> -->
+
             <img src="./assests/hand.webp" class="hand" alt="">
         </div>
-        <!-- <img src="./assests/made.webp" alt="" class="made"> -->
-        <!-- <div id="sentence" class="sentence gap-2 d-flex justify-content-center align-items-center flex-column">
-            <div id="icon1" class="icon d-flex align-items-center justify-content-center flex-row">
-                <img src="./assests/tick.webp" alt="">
-                <p class="mb-0">UPI Transaction</p>
-            </div>
 
-            <div id="icon2" class="icon d-flex align-items-center justify-content-center flex-row">
-                <img src="./assests/tick.webp" alt="">
-                <p class="mb-0">100% Guarantee</p>
-            </div>
-        </div> -->
 
         <div class="marqee">
             <p style="text-align: center; color: white;">Winner's List</p>
@@ -119,16 +125,15 @@
 
     <div id="final_popup" class="final_popup">
         <canvas id="canvas"></canvas>
-        <!-- <h1 class="congrats" style="text-align: center;"><i>HURRAY ! CONGRATULATIONS !</i></h1> -->
-        <!-- <p class="mt-10">Just click on <strong>Claim Now</strong> to receive the deal.</p> -->
+
         <div class="popup-con ">
             <!-- <img src="./assets/new/giftbox.webp   " width="80px" class="coin_bag"> -->
             <div>
                 <img src="./assests/image_3.webp" alt="" width="100%" style="margin-bottom: 10px;">
             </div>
 
-            <div class="time mt-5">
-                <h2 class="mb-4" id="heading" style="color: red; font-size: 14px;  ">Limited Time
+            <div class="time">
+                <h2 class="" id="heading" style="color: red; font-size: 14px; margin-bottom: 20px;  ">Limited Time
                     Offer Remaining</h2>
                 <div class="timer-container" id="timer" style="font-size: 16px; font-weight: 600;">
                     <div id="hours" class="timer-box">00</div>
@@ -139,10 +144,10 @@
                 </div>
             </div>
 
-            <a href="https://www.google.com" target="_blank"><button class="claim-amount mt-20 pulsate-bck"
+            <a href="https://www.google.com" target="_blank"><button class="claim-amount pulsate-bck"
                     type="button" style="width: 70%;">Withdraw Now</button></a>
 
-            <p class="mt-10" style="font-size: 12px;">Hurry up! Valid for few minutes only.</p>
+            <p class="" style="font-size: 12px;">Hurry up! Valid for few minutes only.</p>
         </div>
 
         <!-- <div class="sub-heading-offer">
@@ -160,11 +165,17 @@
         </div>
 
     </div>
-
-</body>
-
-
-<script>
+    <script>
+         window.onload = function () {
+            const preLoader = document.querySelector(".pre-loader");
+            preLoader.style.transition = "opacity 2s";
+            preLoader.style.opacity = "0";
+            setTimeout(() => {
+                preLoader.style.display = "none";
+            }, 2000);
+        }
+    </script>
+    <script sefer>
     // -----------------------------
     // GLOBAL CONFIGURATION & VARIABLES
     // -----------------------------
@@ -266,111 +277,20 @@
 
 
 
-<script>
-    let W = window.innerWidth;
-    let H = window.innerHeight;
-    const canvas = document.getElementById("canvas");
-    const context = canvas.getContext("2d");
-    const maxConfettis = 10;
-    const particles = [];
-
-    const possibleColors = [
-        "DodgerBlue",
-        "OliveDrab",
-        "Gold",
-        "Pink",
-        "SlateBlue",
-        "LightBlue",
-        "Gold",
-        "Violet",
-        "PaleGreen",
-        "SteelBlue",
-        "SandyBrown",
-        "Chocolate",
-        "Crimson"
-    ];
-
-    function randomFromTo(from, to) {
-        return Math.floor(Math.random() * (to - from + 1) + from);
-    }
-
-    function confettiParticle() {
-        this.x = Math.random() * W; // x
-        this.y = Math.random() * H - H; // y
-        this.r = randomFromTo(11, 33); // radius
-        this.d = Math.random() * maxConfettis + 11;
-        this.color =
-            possibleColors[Math.floor(Math.random() * possibleColors.length)];
-        this.tilt = Math.floor(Math.random() * 33) - 11;
-        this.tiltAngleIncremental = Math.random() * 0.07 + 0.05;
-        this.tiltAngle = 0;
-
-        this.draw = function () {
-            context.beginPath();
-            context.lineWidth = this.r / 2;
-            context.strokeStyle = this.color;
-            context.moveTo(this.x + this.tilt + this.r / 3, this.y);
-            context.lineTo(this.x + this.tilt, this.y + this.tilt + this.r / 5);
-            return context.stroke();
-        };
-    }
-
-    function Draw() {
-        const results = [];
-
-        // Magical recursive functional love
-        requestAnimationFrame(Draw);
-
-        context.clearRect(0, 0, W, window.innerHeight);
-
-        for (var i = 0; i < maxConfettis; i++) {
-            results.push(particles[i].draw());
-        }
-
-        let particle = {};
-        let remainingFlakes = 0;
-        for (var i = 0; i < maxConfettis; i++) {
-            particle = particles[i];
-
-            particle.tiltAngle += particle.tiltAngleIncremental;
-            particle.y += (Math.cos(particle.d) + 3 + particle.r / 2) / 2;
-            particle.tilt = Math.sin(particle.tiltAngle - i / 3) * 15;
-
-            if (particle.y <= H) remainingFlakes++;
-
-            // If a confetti has fluttered out of view,
-            // bring it back to above the viewport and let if re-fall.
-            if (particle.x > W + 30 || particle.x < -30 || particle.y > H) {
-                particle.x = Math.random() * W;
-                particle.y = -30;
-                particle.tilt = Math.floor(Math.random() * 10) - 20;
-            }
-        }
-
-        return results;
-    }
-
-    window.addEventListener(
-        "resize",
-        function () {
-            W = window.innerWidth;
-            H = window.innerHeight;
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        },
-        false
-    );
-
-    // Push new confetti objects to particles[]
-    for (var i = 0; i < maxConfettis; i++) {
-        particles.push(new confettiParticle());
-    }
-
-    // Initialize
-    canvas.width = W;
-    canvas.height = H;
-    Draw();
+<script defer>
+   let W=window.innerWidth;let H=window.innerHeight;const canvas=document.getElementById("canvas");const context=canvas.getContext("2d");const maxConfettis=10;const particles=[];const possibleColors=["DodgerBlue","OliveDrab","Gold","Pink","SlateBlue","LightBlue","Gold","Violet","PaleGreen","SteelBlue","SandyBrown","Chocolate","Crimson"];function randomFromTo(from,to){return Math.floor(Math.random()*(to-from+1)+from)}
+function confettiParticle(){this.x=Math.random()*W;this.y=Math.random()*H-H;this.r=randomFromTo(11,33);this.d=Math.random()*maxConfettis+11;this.color=possibleColors[Math.floor(Math.random()*possibleColors.length)];this.tilt=Math.floor(Math.random()*33)-11;this.tiltAngleIncremental=Math.random()*0.07+0.05;this.tiltAngle=0;this.draw=function(){context.beginPath();context.lineWidth=this.r/2;context.strokeStyle=this.color;context.moveTo(this.x+this.tilt+this.r/3,this.y);context.lineTo(this.x+this.tilt,this.y+this.tilt+this.r/5);return context.stroke()}}
+function Draw(){const results=[];requestAnimationFrame(Draw);context.clearRect(0,0,W,window.innerHeight);for(var i=0;i<maxConfettis;i++){results.push(particles[i].draw())}
+let particle={};let remainingFlakes=0;for(var i=0;i<maxConfettis;i++){particle=particles[i];particle.tiltAngle+=particle.tiltAngleIncremental;particle.y+=(Math.cos(particle.d)+3+particle.r/2)/2;particle.tilt=Math.sin(particle.tiltAngle-i/3)*15;if(particle.y<=H)remainingFlakes++;if(particle.x>W+30||particle.x<-30||particle.y>H){particle.x=Math.random()*W;particle.y=-30;particle.tilt=Math.floor(Math.random()*10)-20}}
+return results}
+window.addEventListener("resize",function(){W=window.innerWidth;H=window.innerHeight;canvas.width=window.innerWidth;canvas.height=window.innerHeight},!1);for(var i=0;i<maxConfettis;i++){particles.push(new confettiParticle())}
+canvas.width=W;canvas.height=H;Draw()
 </script>
+
+
+</body>
+
+
 
 
 
